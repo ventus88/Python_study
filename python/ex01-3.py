@@ -1,3 +1,5 @@
+#파이썬 숙제 정수 문제 3번
+
 triangle = int(input("삼각현 한 변은?"))
 triangle1 = int(input("삼각현 다른 한 변은?"))
 
