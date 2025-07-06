@@ -2,15 +2,31 @@
 
 import random
 
-game = {1: "가위", 2: "바위", 3: "보"}
-user = int(input("1:가위, 2:바위, 3:보  중 숫자로 선택하세요: "))
-randomA = random.randint(1,3)
+chois = ['가위',"바위","보"]
+computer = chois[random.randint (0,2)]
+user = input("가위,바위,보 중에 고르시오 ")
 
-if user == 1 and randomA ==3 or user == 2 and randomA ==1 or user ==3 and randomA ==2:
-    print("사용자 승리")
-elif randomA == 1 and user == 3 or randomA == 2 and user == 1 or randomA == 3 and user == 2:
-    print("컴퓨터 승리")
-else:
-    print("비겼습니다")
+if user == '가위':      
+     if computer == '가위':
+          re = '비겼습니다'
+     elif computer == '바위':
+          re = '컴퓨터가 이겼습니다'
+     else:
+          re = '유저가 이겼습니다'
+elif user == '바위':
+     if computer == '바위':
+          re = '비겼습니다'
+     elif computer == '보':
+          re = '컴퓨터가 이겼습니다'
+     else:
+          re = '유저가 이겼습니다'
+elif user == '보':
+     if computer == '보':
+          re = '비겼습니다'
+     elif computer == '가위':
+          re = '컴퓨터가 이겼습니다'
+     else:
+          re = '유저가 이겼습니다'
 
-print("사용자 :",game[user], "컴퓨터 :",game[randomA])
+print(f"{re}")
+print("서로 낸 것은? " "사용자 :",user, "컴퓨터 :",computer)
