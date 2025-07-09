@@ -1,11 +1,10 @@
 #if 조건문 9번 문제
 
-from random import randint
+import random
 
-rum1 = randint(0,10)
-rum2 = randint(0,10)
-
-rangame = randint(1,4)
+rum1 = random.randrange(1,10)
+rum2 = random.randrange(1,10)
+rangame = random.randint(4)
 
 if rangame == 1:
     addition = rum1+rum2
