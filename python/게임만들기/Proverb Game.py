@@ -42,7 +42,7 @@ for total in range(5):
         score += 1
         break
     else:
-        hint = back[0]
+        hint = back[:3]
         lenght = len(back)
         print(f"오답입니다 힌트는: {hint} 글자수는: {lenght}")
         answer = input("힌트를 보고 다시 입력하세요").strip()
